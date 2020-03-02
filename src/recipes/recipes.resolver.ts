@@ -11,7 +11,7 @@ import { GqlAuthGuard } from "../common/gql.authguard";
 const pubSub = new PubSub();
 
 @Resolver(of => Recipe)
-@UseGuards(GqlAuthGuard)
+// @UseGuards(GqlAuthGuard)
 export class RecipesResolver {
   constructor(private readonly recipesService: RecipesService) {}
 

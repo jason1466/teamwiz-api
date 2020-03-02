@@ -5,7 +5,7 @@ import { ApplicationModule } from "./app.module";
 // import { AzureFunction, Context, HttpRequest } from "@azure/functions";
 // import * as serverless from "azure-function-express";
 // import * as express from "express";
-import { fs } from "file-system";
+// import { fs } from "file-system";
 
 async function bootstrap() {
   // const expressApp = express();
@@ -14,10 +14,10 @@ async function bootstrap() {
   //   .then(app => app.enableCors())
   //   .then(app => app.init())
   //   .then(() => serverless.createHandler(expressApp));
-  const httpsOptions = {
-    key: fs.readFileSync("./server.key"),
-    cert: fs.readFileSync("./server.crt")
-  };
+  // const httpsOptions = {
+  //   key: fs.readFileSync("./server.key"),
+  //   cert: fs.readFileSync("./server.crt")
+  // };
   const app = await NestFactory.create(ApplicationModule, {
     // httpsOptions,
   });
